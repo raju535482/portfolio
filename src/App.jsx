@@ -9,7 +9,7 @@ export default function App() {
       <header className="bg-white shadow-md p-6 text-center">
         <h1 className="text-3xl font-bold">Raju Yadav</h1>
         <p className="text-lg text-gray-600">
-          Senior Android Developer | PHP & Web Developer
+          Senior Android Developer | PHP & Web Developer | Scrum Master
         </p>
       </header>
 
