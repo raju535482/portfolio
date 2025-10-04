@@ -6,7 +6,7 @@ export default function Portfolio() {
       <section className="text-center py-20">
         <h2 className="text-lg text-gray-400">Hi, I’m</h2>
         <h1 className="text-5xl font-extrabold text-indigo-400">Raju Yadav</h1>
-        <p className="text-xl mt-2 text-gray-300">Senior Android & Web Developer</p>
+        <p className="text-xl mt-2 text-gray-300">Senior Android Developer | iOS Developer | Web Developer</p>
         <p className="max-w-2xl mx-auto mt-4 text-gray-400">
           Crafting exceptional mobile and web experiences with Kotlin, Java, Swift, PHP, and JavaScript.
         </p>
