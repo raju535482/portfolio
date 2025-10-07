@@ -47,7 +47,7 @@ export default function App(){
 
       <main className="relative z-10">
         <section className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 px-6 mb-16">
-          {['6+ yrs','14+','1M+','10+'].map((v,i)=>(
+          {['6+ yrs','14+','10k+','10+'].map((v,i)=>(
             <motion.div custom={i} initial="hidden" whileInView="visible" viewport={{once:true}} variants={cardVariant} key={i}>
               <StatCard value={v} label={['Experience','Apps Delivered','Total Downloads','Clients / Partners'][i]} />
             </motion.div>
