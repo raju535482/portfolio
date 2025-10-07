@@ -2,7 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body, #root { height: 100%; }
+html, body, #root {
+  height: 100%;
+  background-color: #0b0b0b;
+}
 
 /* animated gradient background */
 .animated-bg {
@@ -10,6 +13,7 @@ html, body, #root { height: 100%; }
   background-size: 400% 400%;
   animation: gradientShift 12s ease infinite;
 }
+
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -17,18 +21,30 @@ html, body, #root { height: 100%; }
 }
 
 /* particles container */
-.particles { position: absolute; inset:0; pointer-events:none; overflow:hidden; }
+.particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
 
-.particle { position:absolute; border-radius:9999px; transform:translate3d(0,0,0); }
+.particle {
+  position: absolute;
+  border-radius: 9999px;
+  transform: translate3d(0,0,0);
+}
 
-/* dust variant small white dots */
-.dust .particle { background: rgba(255,255,255,0.95); width:6px; height:6px; opacity:0.06; filter: blur(0.8px); animation: float 10s linear infinite; }
-@keyframes float { 0%{transform:translateY(0)}50%{transform:translateY(-40px)}100%{transform:translateY(0)} }
+/* colorful orbs variant */
+.orbs .particle {
+  width: 140px;
+  height: 140px;
+  opacity: 0.18;
+  filter: blur(30px);
+  animation: drift 18s ease-in-out infinite;
+}
 
-/* orbs variant colorful orbs */
-.orbs .particle { width:140px; height:140px; opacity:0.16; filter: blur(28px); animation: drift 18s ease-in-out infinite; }
-@keyframes drift { 0%{transform:translateY(0) translateX(0)}50%{transform:translateY(-40px) translateX(30px)}100%{transform:translateY(0) translateX(0)} }
-
-/* tilt on hover */
-.tilt-hover { transform-style: preserve-3d; transition: transform 0.35s ease, box-shadow 0.35s ease; }
-.tilt-hover:hover { transform: perspective(900px) rotateX(6deg) rotateY(-6deg) translateY(-6px); box-shadow: 0 24px 50px rgba(0,0,0,0.55); }
+@keyframes drift {
+  0% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-40px) translateX(30px); }
+  100% { transform: translateY(0) translateX(0); }
+}
