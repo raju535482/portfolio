@@ -2,6 +2,7 @@ import {motion} from 'framer-motion';
 import StatCard from './components/StatCard';
 import ProjectCard from './components/ProjectCard';
 import { Mail, Phone, Linkedin } from 'lucide-react';
+import "./index.css";
 
 export default function App(){
 
