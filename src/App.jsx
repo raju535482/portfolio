@@ -25,9 +25,9 @@ export default function App(){
   const cardVariant = { hidden: { opacity:0, y:20 }, visible: i=> ({ opacity:1, y:0, transition: { delay: i*0.06 }}) };
 
   return (
-    <div className="min-h-screen relative overflow-hidden animated-bg dust">
+    <div className="min-h-screen relative overflow-hidden animated-bg orbs">
       <div className="particles" aria-hidden="true">
-        {Array.from({length:28}).map((_,i)=> (<div key={i} className='particle' style={{left: Math.random()*100 + '%', top: Math.random()*100 + '%', transform: `scale(${0.5+Math.random()*1.2})`}} />))}
+        {[0,1,2,3,4].map((i)=> (<div key={i} className='particle' style={{left: (8+i*18)+'%', top: (12+i*10)+'%', background: `radial-gradient(circle at 30% 30%, rgba(139,92,246,0.28), rgba(79,70,229,0.06))`}} />))}
       </div>
 
       <header className="max-w-4xl mx-auto text-center py-16 px-6 relative z-10">
@@ -165,3 +165,5 @@ export default function App(){
         </footer>
       </main>
     </div>
+  )
+}
